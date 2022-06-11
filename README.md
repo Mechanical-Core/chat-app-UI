@@ -1,2 +1,2 @@
-# chat-app-UI
+# chat-app
 Chat app user interface with SCSS and React
