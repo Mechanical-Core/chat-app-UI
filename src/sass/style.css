@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "Product Regular";
+  src: local("Product Regular"), url("@/fonts/ProductSans-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Italic";
+  src: local("Product Italic"), url("@/fonts/ProductSans-Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Thin Regular";
+  src: local("Product Thin Regular"), url("@/fonts/ProductSans-Thin.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Light Regular";
+  src: local("Product Light Regular"), url("@/fonts/ProductSans-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Medium Regular";
+  src: local("Product Medium Regular"), url("@/fonts/ProductSans-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Black Regular";
+  src: local("Product Black Regular"), url("@/fonts/ProductSans-Black.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Thin Italic";
+  src: local("Product Thin Italic"), url("@/fonts/ProductSans-ThinItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Light Italic";
+  src: local("Product Light Italic"), url("@/fonts/ProductSans-LightItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Medium Italic";
+  src: local("Product Medium Italic"), url("@/fonts/ProductSans-MediumItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Bold";
+  src: local("Product Bold"), url("@/fonts/ProductSans-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Bold Italic";
+  src: local("Product Bold Italic"), url("@/fonts/ProductSans-BoldItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Black Italic";
+  src: local("Product Black Italic"), url("@/fonts/ProductSans-BlackItalic.woff") format("woff");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-smooth: 2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:focus {
+  outline: none;
+}
+
+::-moz-placeholder {
+  color: #313131;
+}
+
+:-ms-input-placeholder {
+  color: #313131;
+}
+
+::placeholder {
+  color: #313131;
+}
+
+::-moz-selection {
+  background: rgb(68, 68, 68);
+  color: #222222;
+}
+
+::selection {
+  background: rgb(68, 68, 68);
+  color: #222222;
+}
+
+.MainLeftBar {
+  background-color: #f2f2f2;
+  width: max(370px, min(425px, 23%));
+  height: 100vh;
+}
+
+.UserCard {
+  width: 100%;
+  display: flex;
+  border-bottom: solid 1px #e4e4e4;
+}
+.UserCard img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 68px;
+  margin: 7px 10px 7px 10px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+}
+.UserCard .UserData {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 7px 9px 5px 0px;
+}
+.UserCard .UserData .UserName {
+  width: 100%;
+  height: 35%;
+  font-family: "Product Medium Regular";
+  color: #528DFF;
+  font-size: 20px;
+  vertical-align: middle;
+}
+.UserCard .UserData .UserDesc {
+  width: 100%;
+  height: 65%;
+  font-family: "Product Regular";
+  color: #949494;
+  font-size: 17px;
+  vertical-align: top;
+}/*# sourceMappingURL=style.css.map */
