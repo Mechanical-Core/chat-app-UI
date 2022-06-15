@@ -11,7 +11,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
       '@Style': path.resolve(__dirname, './src/sass/style.css'),
       '@Graphics': path.resolve(__dirname, './src/static/Graphics'),
-      '@React': path.resolve(__dirname, './src/static/ReactComponents'),
+      '@React': path.resolve(__dirname, './src/static/React'),
     }
   },
 })

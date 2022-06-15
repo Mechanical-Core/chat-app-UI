@@ -1,5 +1,5 @@
 import React from 'react';
-import UserCard from '@React/UserCard';
+import UserCard from '@React/ReactComponents/UserCard';
 
 class MainLeftBar extends React.Component{
   render() { 
