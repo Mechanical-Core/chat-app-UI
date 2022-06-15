@@ -6,8 +6,8 @@ import {
 } from "react-router-dom";
 
 // import Home from '@React/Pages/Home';
-import Login from '@React/Pages/Login';
-import Register from '@React/Pages/Register';
+import Login from '@React/pages/Login';
+import Register from '@React/pages/Register';
 
 class App extends React.Component{
   render(){

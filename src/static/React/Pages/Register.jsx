@@ -4,9 +4,7 @@ class Register extends React.Component{
   render() { 
     return ( 
       <>
-        <div>
-          hello
-        </div>
+        <img className="BackgroundRain" src="src\static\graphics\svg\BackgroundRain.svg"/>
       </>
     )
   }
