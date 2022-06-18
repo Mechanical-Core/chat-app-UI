@@ -1,0 +1,51 @@
+@use "../../abstract/colors" as *;
+
+.registerTitleFrame{
+
+}
+
+.registerField{
+  background-color: white;
+  width: 350px;
+  height: 550px;
+  border-radius: 17px;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.inputFields{
+  display: flex;
+  background-color: inherit;
+  flex-direction: column;
+  justify-content: space-around;
+  height: fit-content;
+  width: 85%;
+  margin-inline: auto;
+}
+
+.registerTitleFrame{
+  margin-top: 19px;
+  margin-bottom: 16px;
+  padding-inline:20px;
+
+  .title{
+    font-family: "Product Medium";
+    font-size: 30px;
+    color: $color-accent;
+    text-align: center;
+  }
+
+  .description{
+    margin-top: 5px;
+    font-family: "Product Regular";
+    font-size: 16px;
+    color: $color-gray500;
+    text-align: center;
+  }
+}

@@ -15,8 +15,8 @@
   src: local("Product Light Regular"), url("@/fonts/ProductSans-Light.woff") format("woff");
 }
 @font-face {
-  font-family: "Product Medium Regular";
-  src: local("Product Medium Regular"), url("@/fonts/ProductSans-Medium.woff") format("woff");
+  font-family: "Product Medium";
+  src: local("Product Medium"), url("@/fonts/ProductSans-Medium.woff") format("woff");
 }
 @font-face {
   font-family: "Product Black Regular";
@@ -180,6 +180,163 @@ select {
   vertical-align: top;
 }
 
-.BackgroundRain body {
-  background: url();
+.BackgroundRain {
+  background: url("../static/graphics/images/BackgroundRain.png") center center repeat;
+  background-size: 1200px;
+  image-rendering: crisp-edges;
+  -webkit-animation: BackgroundRainAnim 5s infinite linear;
+          animation: BackgroundRainAnim 5s infinite linear;
+}
+
+.inputBoxFrame {
+  background-color: inherit;
+  border: 2px solid #528DFF;
+  border-radius: 6px;
+  position: relative;
+  margin-bottom: 12px;
+  height: 47px;
+  transition: 0.2s;
+}
+.inputBoxFrame .title {
+  font-family: "Product Light Regular";
+  color: #528DFF;
+  font-size: 14px;
+  background-color: inherit;
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 4px;
+  padding-right: 4px;
+  top: -8px;
+  left: 6px;
+  pointer-events: none;
+}
+.inputBoxFrame .inputBox {
+  margin-left: 6px;
+  font-family: "Product Regular";
+  color: #6b6b6b;
+  background: none;
+  border: none;
+  position: absolute;
+  height: 100%;
+}
+.inputBoxFrame ::-moz-placeholder {
+  color: #bcbcbc;
+  font-family: "Product Light Regular";
+  font-size: medium;
+  pointer-events: none;
+}
+.inputBoxFrame :-ms-input-placeholder {
+  color: #bcbcbc;
+  font-family: "Product Light Regular";
+  font-size: medium;
+  pointer-events: none;
+}
+.inputBoxFrame ::placeholder {
+  color: #bcbcbc;
+  font-family: "Product Light Regular";
+  font-size: medium;
+  pointer-events: none;
+}
+.inputBoxFrame .infoMessage {
+  position: relative;
+  top: 100%;
+  color: inherit;
+  font-family: "Product Light Regular";
+  display: flex;
+  transition: 0.5s;
+}
+.inputBoxFrame .infoMessage #decal {
+  height: 14px;
+  margin: 5px;
+}
+.inputBoxFrame .infoMessage #text {
+  color: transparent;
+  height: 100%;
+  font-size: 15px;
+  align-self: center;
+}
+.inputBoxFrame .infoMessage .error {
+  filter: brightness(0) saturate(100%) invert(39%) sepia(100%) saturate(7500%) hue-rotate(354deg) brightness(98%) contrast(117%);
+  color: #ff0700 !important;
+}
+.inputBoxFrame .infoMessage .warning {
+  filter: brightness(0) saturate(100%) brightness(0) saturate(100%) invert(72%) sepia(90%) saturate(2945%) hue-rotate(1deg) brightness(105%) contrast(103%);
+  color: #ffbb00 !important;
+}
+.inputBoxFrame .infoMessage .success {
+  filter: brightness(0) saturate(100%) brightness(0) saturate(100%) invert(53%) sepia(84%) saturate(698%) hue-rotate(68deg) brightness(112%) contrast(124%);
+  color: #2ee700 !important;
+}
+
+.active {
+  color: #868686;
+  margin-bottom: 27px;
+}
+
+@-webkit-keyframes BackgroundRainAnim {
+  from {
+    background-position-x: 0px;
+    background-position-y: 0px;
+  }
+  to {
+    background-position-x: 1200px;
+    background-position-y: 1200px;
+  }
+}
+
+@keyframes BackgroundRainAnim {
+  from {
+    background-position-x: 0px;
+    background-position-y: 0px;
+  }
+  to {
+    background-position-x: 1200px;
+    background-position-y: 1200px;
+  }
+}
+.registerField {
+  background-color: white;
+  width: 350px;
+  height: 550px;
+  border-radius: 17px;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inputFields {
+  display: flex;
+  background-color: inherit;
+  flex-direction: column;
+  justify-content: space-around;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 85%;
+  margin-inline: auto;
+}
+
+.registerTitleFrame {
+  margin-top: 19px;
+  margin-bottom: 16px;
+  padding-inline: 20px;
+}
+.registerTitleFrame .title {
+  font-family: "Product Medium";
+  font-size: 30px;
+  color: #528DFF;
+  text-align: center;
+}
+.registerTitleFrame .description {
+  margin-top: 5px;
+  font-family: "Product Regular";
+  font-size: 16px;
+  color: #797979;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
