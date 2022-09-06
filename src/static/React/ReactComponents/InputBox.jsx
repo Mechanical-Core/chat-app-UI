@@ -11,6 +11,8 @@ class InputBox extends React.Component{
       inputState: "",
       inputStateText: "",
 
+      currentPass: "",
+
       users: [
         ["user1", "user1@gmail.com"],
         ["user2", "user2@yandex.com"],
@@ -34,7 +36,6 @@ class InputBox extends React.Component{
     h2 = Math.imul(h2 ^ (h2>>>16), 2246822507) ^ Math.imul(h1 ^ (h1>>>13), 3266489909);
     return 4294967296 * (2097151 & h2) + (h1>>>0);
   };
-
 
   setMessageState(event, state=this.state.inputState, stateText=this.state.inputStateText){
     var infoMessage = event.target.parentNode.querySelectorAll('.infoMessage')[0]
@@ -125,7 +126,8 @@ class InputBox extends React.Component{
         }
 
         break;
-
+      
+      case "passwordSimple":
       case "password":
         if(event.target.value.length < 8){
           this.setState({
@@ -154,12 +156,14 @@ class InputBox extends React.Component{
             passwordInput: event.target.value,
           }, () => {
             this.setMessageState(event)
-            this.props.sendPass(event.target.value)
-            this.props.sendState("checkPasswordInput", true)
+            this.props.sendData("password", this.hash(event.target.value))
+            this.props.sendState("checkPasswordInput",true)
+
             setTimeout(() => {
               this.setState({
                 inputState: "",
                 inputStateText: "",
+                passwordState: true,
               }, () => {
                 event.target.parentElement.parentElement.get
                 this.setMessageState(event)
@@ -168,18 +172,20 @@ class InputBox extends React.Component{
           })
         }
 
-        var infoMessage = document.querySelectorAll('.inputFields')[0].querySelectorAll('.inputBoxFrame')[3].querySelectorAll(".infoMessage")[0]
+        if(this.props.validate != "passwordSimple"){
+          this.props.sendState("checkPasswordState", false)
 
-        infoMessage.parentElement.querySelectorAll('.inputBox')[0].value = "";
+          var infoMessage = document.querySelectorAll('.inputFields')[0].querySelectorAll('.inputBoxFrame')[3].querySelectorAll(".infoMessage")[0]
+        
+          infoMessage.parentElement.querySelectorAll('.inputBox')[0].value = "";
 
-        infoMessage.parentElement.classList.remove('active')
-        infoMessage.querySelector("#decal").src = ""
-        infoMessage.querySelector("#text").innerHTML = ""
+          infoMessage.parentElement.classList.remove('active')
+          infoMessage.querySelector("#decal").src = ""
+          infoMessage.querySelector("#text").innerHTML = ""
 
-        infoMessage.querySelector("#decal").className = ""
-        infoMessage.querySelector("#text").className = ""
-
-        this.props.sendState("checkPasswordState", false)
+          infoMessage.querySelector("#decal").className = ""
+          infoMessage.querySelector("#text").className = ""
+        }
 
         break;
 

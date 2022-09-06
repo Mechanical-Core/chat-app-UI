@@ -1,6 +1,6 @@
 @use "../../abstract/colors" as *;
 
-.RegisterFrame{
+.startFrame{
   display: flex;
   position: absolute;
   top: 50%;
@@ -13,7 +13,7 @@
   box-shadow: 0px 0px 20px 22px #111111;
 }
 
-.registerField{
+.startField{
   background-color: white;
   width: 350px;
   height: fit-content;
@@ -28,6 +28,7 @@
     justify-content: center;
 
     margin-top: 5px;
+    margin-bottom: 13px;
   }
 }
 
@@ -42,7 +43,7 @@
   margin-bottom: 3px;
 }
 
-.registerTitleFrame{
+.startTitleFrame{
   margin-top: 19px;
   margin-bottom: 22px;
   padding-inline:20px;
@@ -74,12 +75,17 @@
   color: $color-gray200;
 }
 
+.registerChecks {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
 .MazeBackgroundField {
   display: flex;
   margin-right: -34px;
   background: linear-gradient(to bottom,#222227 0%, #1b1b1f 100%);
   position: relative;
-  width: 360px;
+  width: 350px;
   left: -34px;
   border-radius: 17px;
   stroke:#ff8800;
@@ -91,7 +97,7 @@
   .MazeBackgroundField {
     margin-right: -350px;
     left: -350px;
-    width: 300px;
+    width: 350px;
     transition: .5s;
   }
 }

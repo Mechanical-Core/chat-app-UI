@@ -103,7 +103,6 @@ select {
   html:focus-within {
     scroll-behavior: auto;
   }
-
   *,
 *::before,
 *::after {
@@ -297,17 +296,15 @@ select {
   font-family: "Product Regular";
   color: white;
   font-size: 17px;
-  width: 112px;
+  width: 40%;
   height: 40px;
   margin: 8px;
-  transition: 0.05s;
+  transition: 0.15s;
   cursor: pointer;
 }
 
 .btn:hover {
   box-shadow: 0px 0px 6px 0px #528DFF;
-  transition: 0.05s;
-  font-size: 18px;
 }
 
 .btn-invert {
@@ -315,11 +312,11 @@ select {
   color: #528DFF;
   font-family: "Product Regular";
   border: 2px solid #528DFF;
+  transition: 0.15s;
 }
 
 .btn-invert:hover {
   box-shadow: 0px 0px 6px 0px #528DFF;
-  transition: 0.05s;
 }
 
 .btn-danger {
@@ -351,6 +348,7 @@ select {
   margin-right: 5px;
   margin-top: 2px;
   border: 3px solid #528DFF;
+  transition: 0.1s;
 }
 .checkBoxFrame .enabled {
   background: #2761d6;
@@ -398,7 +396,7 @@ select {
     filter: drop-shadow(0px 0px 12px #2761d6);
   }
 }
-.RegisterFrame {
+.startFrame {
   display: flex;
   position: absolute;
   top: 50%;
@@ -412,7 +410,7 @@ select {
   box-shadow: 0px 0px 20px 22px #111111;
 }
 
-.registerField {
+.startField {
   background-color: white;
   width: 350px;
   height: -webkit-fit-content;
@@ -424,10 +422,11 @@ select {
   flex-direction: column;
   z-index: 1;
 }
-.registerField .actionButtons {
+.startField .actionButtons {
   display: flex;
   justify-content: center;
   margin-top: 5px;
+  margin-bottom: 13px;
 }
 
 .inputFields {
@@ -443,18 +442,18 @@ select {
   margin-bottom: 3px;
 }
 
-.registerTitleFrame {
+.startTitleFrame {
   margin-top: 19px;
   margin-bottom: 22px;
   padding-inline: 20px;
 }
-.registerTitleFrame .title {
+.startTitleFrame .title {
   font-family: "Product Medium";
   font-size: 30px;
   color: #528DFF;
   text-align: center;
 }
-.registerTitleFrame .description {
+.startTitleFrame .description {
   margin-top: 5px;
   font-family: "Product Regular";
   font-size: 16px;
@@ -473,12 +472,17 @@ select {
   color: #c9c9c9;
 }
 
+.registerChecks {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
 .MazeBackgroundField {
   display: flex;
   margin-right: -34px;
   background: linear-gradient(to bottom, #222227 0%, #1b1b1f 100%);
   position: relative;
-  width: 360px;
+  width: 350px;
   left: -34px;
   border-radius: 17px;
   stroke: #ff8800;
@@ -490,7 +494,7 @@ select {
   .MazeBackgroundField {
     margin-right: -350px;
     left: -350px;
-    width: 300px;
+    width: 350px;
     transition: 0.5s;
   }
 }/*# sourceMappingURL=style.css.map */

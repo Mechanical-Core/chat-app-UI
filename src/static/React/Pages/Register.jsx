@@ -78,27 +78,26 @@ class Register extends React.Component{
 
   render() { 
     return ( 
-      <div className="RegisterFrame">
-        <div className="registerField">
-          <div className="registerTitleFrame">
+      <div className="startFrame">
+        <div className="startField">
+          <div className="startTitleFrame">
             <div className="title">Registration</div>
             <div className="description">Enter all of the necessary information below to create a new account!</div>
           </div>
           <div className="inputFields">
-            <InputBox title="Username" defaultText="Your username..." maxLength="21" validate="username" sendState={this.getState} sendData={this.getData}/>
-            <InputBox title="Email" defaultText="Your email address.." maxLength="254" validate="email" sendState={this.getState} sendData={this.getData}/>
+            <InputBox title="Username" defaultText="Your username" maxLength="21" validate="username" sendState={this.getState} sendData={this.getData}/>
+            <InputBox title="Email" defaultText="Your email address" maxLength="254" validate="email" sendState={this.getState} sendData={this.getData}/>
             <InputBox title="Password" defaultText="Your password"  maxLength="21" validate="password" sendPass={this.getPass} sendState={this.getState} sendData={this.getData}/>
-            <InputBox idName="passwordConfirm" title="Password Confirmation" defaultText="Repeat your password..." maxLength="21" validate="passwordRepeat" currentPass={this.state.currentPass} sendState={this.getState} sendData={this.getData}/>
+            <InputBox idName="passwordConfirm" title="Password Confirmation" defaultText="Repeat your password" maxLength="21" validate="passwordRepeat" currentPass={this.state.currentPass} sendState={this.getState} sendData={this.getData}/>
           </div>
           <div className="registerChecks">
-            <CheckBox text='I agree to my data being stored and processed by ChatApp'/>
+            <CheckBox text='I agree to my data being stored and processed by Example'/>
             <CheckBox text="I have read and accepted the EULA"/>
           </div>
           <div className="actionButtons">
             <Button value="Sign up"/>
             <Button value="Return" tag="invert"/>
           </div>
-          <div className="helpMessage">If you have any issues registering or logging in, email markusmisins@gmail.com</div>
         </div>
         <div className="MazeBackgroundField">
           <div className="BackgroundMaze">
