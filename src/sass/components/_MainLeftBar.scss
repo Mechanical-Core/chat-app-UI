@@ -1,0 +1,7 @@
+@use "../abstract/colors" as *;
+
+.MainLeftBar{
+  background-color: $color-gray50;
+  width: max(370px, min(425px, 23%));
+  height: 100vh;
+}

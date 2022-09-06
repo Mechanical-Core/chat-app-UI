@@ -1,0 +1,500 @@
+@font-face {
+  font-family: "Product Regular";
+  src: local("Product Regular"), url("@/fonts/ProductSans-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Italic";
+  src: local("Product Italic"), url("@/fonts/ProductSans-Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Thin Regular";
+  src: local("Product Thin Regular"), url("@/fonts/ProductSans-Thin.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Light Regular";
+  src: local("Product Light Regular"), url("@/fonts/ProductSans-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Medium";
+  src: local("Product Medium"), url("@/fonts/ProductSans-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Black Regular";
+  src: local("Product Black Regular"), url("@/fonts/ProductSans-Black.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Thin Italic";
+  src: local("Product Thin Italic"), url("@/fonts/ProductSans-ThinItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Light Italic";
+  src: local("Product Light Italic"), url("@/fonts/ProductSans-LightItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Medium Italic";
+  src: local("Product Medium Italic"), url("@/fonts/ProductSans-MediumItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Bold";
+  src: local("Product Bold"), url("@/fonts/ProductSans-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Bold Italic";
+  src: local("Product Bold Italic"), url("@/fonts/ProductSans-BoldItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Product Black Italic";
+  src: local("Product Black Italic"), url("@/fonts/ProductSans-BlackItalic.woff") format("woff");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-smooth: 2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:focus {
+  outline: none;
+}
+
+::-moz-placeholder {
+  color: #313131;
+}
+
+:-ms-input-placeholder {
+  color: #313131;
+}
+
+::placeholder {
+  color: #313131;
+}
+
+::-moz-selection {
+  background: rgb(68, 68, 68);
+  color: #222222;
+}
+
+::selection {
+  background: rgb(68, 68, 68);
+  color: #222222;
+}
+
+.MainLeftBar {
+  background-color: #f2f2f2;
+  width: max(370px, min(425px, 23%));
+  height: 100vh;
+}
+
+.UserCard {
+  width: 100%;
+  display: flex;
+  border-bottom: solid 1px #e4e4e4;
+}
+.UserCard img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 68px;
+  margin: 7px 10px 7px 10px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+}
+.UserCard .UserData {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 7px 9px 5px 0px;
+}
+.UserCard .UserData .UserName {
+  width: 100%;
+  height: 35%;
+  font-family: "Product Medium Regular";
+  color: #528DFF;
+  font-size: 20px;
+  vertical-align: middle;
+}
+.UserCard .UserData .UserDesc {
+  width: 100%;
+  height: 65%;
+  font-family: "Product Regular";
+  color: #949494;
+  font-size: 17px;
+  vertical-align: top;
+}
+
+.BackgroundRain {
+  background: url("../static/graphics/images/BackgroundRain.png") center center repeat;
+  background-size: 1200px;
+  image-rendering: crisp-edges;
+  -webkit-animation: BackgroundRainAnim 5s infinite linear;
+          animation: BackgroundRainAnim 5s infinite linear;
+}
+
+.BackgroundMaze {
+  width: inherit;
+  background: url("../static/graphics/svg/maze.svg") center center repeat;
+  background-size: 875px;
+  background-position: 847px 629px;
+  border-radius: inherit;
+  -webkit-animation: dropShadowAnim 1s alternate infinite ease;
+          animation: dropShadowAnim 1s alternate infinite ease;
+}
+
+.inputBoxFrame {
+  background-color: inherit;
+  border: 2px solid #528DFF;
+  border-radius: 6px;
+  position: relative;
+  margin-bottom: 12px;
+  height: 47px;
+  transition: 0.2s;
+}
+.inputBoxFrame .title {
+  font-family: "Product Light Regular";
+  color: #528DFF;
+  font-size: 14px;
+  background-color: inherit;
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 4px;
+  padding-right: 4px;
+  top: -8px;
+  left: 6px;
+  pointer-events: none;
+}
+.inputBoxFrame .inputBox {
+  margin-left: 6px;
+  font-family: "Product Regular";
+  color: #6b6b6b;
+  background: none;
+  border: none;
+  position: absolute;
+  height: 100%;
+}
+.inputBoxFrame ::-moz-placeholder {
+  color: #bcbcbc;
+  font-family: "Product Light Regular";
+  font-size: medium;
+  pointer-events: none;
+}
+.inputBoxFrame :-ms-input-placeholder {
+  color: #bcbcbc;
+  font-family: "Product Light Regular";
+  font-size: medium;
+  pointer-events: none;
+}
+.inputBoxFrame ::placeholder {
+  color: #bcbcbc;
+  font-family: "Product Light Regular";
+  font-size: medium;
+  pointer-events: none;
+}
+.inputBoxFrame .infoMessage {
+  position: relative;
+  top: 100%;
+  color: inherit;
+  font-family: "Product Light Regular";
+  display: flex;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.inputBoxFrame .infoMessage #decal {
+  height: 14px;
+  margin: 5px;
+}
+.inputBoxFrame .infoMessage #text {
+  color: transparent;
+  height: 100%;
+  font-size: 15px;
+  align-self: center;
+}
+.inputBoxFrame .infoMessage .error {
+  filter: brightness(0) saturate(100%) invert(39%) sepia(100%) saturate(7500%) hue-rotate(354deg) brightness(98%) contrast(117%);
+  color: #ff0700 !important;
+}
+.inputBoxFrame .infoMessage .warning {
+  filter: brightness(0) saturate(100%) brightness(0) saturate(100%) invert(72%) sepia(90%) saturate(2945%) hue-rotate(1deg) brightness(105%) contrast(103%);
+  color: #ffbb00 !important;
+}
+.inputBoxFrame .infoMessage .success {
+  filter: brightness(0) saturate(100%) brightness(0) saturate(100%) invert(53%) sepia(84%) saturate(698%) hue-rotate(68deg) brightness(112%) contrast(124%);
+  color: #2ee700 !important;
+}
+
+.active {
+  color: #868686;
+  margin-bottom: 27px;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  background: #528DFF;
+  font-family: "Product Regular";
+  color: white;
+  font-size: 17px;
+  width: 40%;
+  height: 40px;
+  margin: 8px;
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 6px 0px #528DFF;
+}
+
+.btn-invert {
+  background: inherit;
+  color: #528DFF;
+  font-family: "Product Regular";
+  border: 2px solid #528DFF;
+  transition: 0.15s;
+}
+
+.btn-invert:hover {
+  box-shadow: 0px 0px 6px 0px #528DFF;
+}
+
+.btn-danger {
+  background: #da0707;
+  font-family: "Product Medium";
+}
+
+.btn-danger-invert {
+  background: inherit;
+  color: #da0707;
+  font-family: "Product Medium";
+  border: 2px solid #da0707;
+}
+
+.checkBoxFrame {
+  width: 80%;
+  margin-inline: auto;
+  margin-bottom: 6px;
+  margin-top: 2px;
+  display: flex;
+  cursor: pointer;
+}
+.checkBoxFrame .circle {
+  background: inherit;
+  width: 14px;
+  height: 14px;
+  aspect-ratio: 1;
+  border-radius: 100vh;
+  margin-right: 5px;
+  margin-top: 2px;
+  border: 3px solid #528DFF;
+  transition: 0.1s;
+}
+.checkBoxFrame .enabled {
+  background: #2761d6;
+}
+.checkBoxFrame .text {
+  font-family: "Product Regular";
+  font-size: 14px;
+  color: #6b6b6b;
+}
+
+@-webkit-keyframes BackgroundRainAnim {
+  from {
+    background-position-x: 0px;
+    background-position-y: 0px;
+  }
+  to {
+    background-position-x: 1200px;
+    background-position-y: 1200px;
+  }
+}
+
+@keyframes BackgroundRainAnim {
+  from {
+    background-position-x: 0px;
+    background-position-y: 0px;
+  }
+  to {
+    background-position-x: 1200px;
+    background-position-y: 1200px;
+  }
+}
+@-webkit-keyframes dropShadowAnim {
+  from {
+    filter: drop-shadow(0px 0px 6px #2761d6);
+  }
+  to {
+    filter: drop-shadow(0px 0px 12px #2761d6);
+  }
+}
+@keyframes dropShadowAnim {
+  from {
+    filter: drop-shadow(0px 0px 6px #2761d6);
+  }
+  to {
+    filter: drop-shadow(0px 0px 12px #2761d6);
+  }
+}
+.startFrame {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transform: translate(-50%, -50%);
+  flex-direction: row;
+  border-radius: 17px;
+  box-shadow: 0px 0px 20px 22px #111111;
+}
+
+.startField {
+  background-color: white;
+  width: 350px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 17px;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.startField .actionButtons {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 13px;
+}
+
+.inputFields {
+  display: flex;
+  background-color: inherit;
+  flex-direction: column;
+  justify-content: space-around;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 85%;
+  margin-inline: auto;
+  margin-bottom: 3px;
+}
+
+.startTitleFrame {
+  margin-top: 19px;
+  margin-bottom: 22px;
+  padding-inline: 20px;
+}
+.startTitleFrame .title {
+  font-family: "Product Medium";
+  font-size: 30px;
+  color: #528DFF;
+  text-align: center;
+}
+.startTitleFrame .description {
+  margin-top: 5px;
+  font-family: "Product Regular";
+  font-size: 16px;
+  color: #797979;
+  text-align: center;
+}
+
+.helpMessage {
+  width: 85%;
+  margin-inline: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Product Regular";
+  font-size: 13px;
+  color: #c9c9c9;
+}
+
+.registerChecks {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.MazeBackgroundField {
+  display: flex;
+  margin-right: -34px;
+  background: linear-gradient(to bottom, #222227 0%, #1b1b1f 100%);
+  position: relative;
+  width: 350px;
+  left: -34px;
+  border-radius: 17px;
+  stroke: #ff8800;
+  filter: brightness(0.8);
+  transition: 0.5s;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .MazeBackgroundField {
+    margin-right: -350px;
+    left: -350px;
+    width: 350px;
+    transition: 0.5s;
+  }
+}/*# sourceMappingURL=style.css.map */

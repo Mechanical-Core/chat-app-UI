@@ -1,0 +1,23 @@
+@mixin square($border-radius: 0) {
+  aspect-ratio: 1;
+  @if $border-radius != 0{
+    border-radius: $border-radius;
+  }
+}
+
+@mixin borderStyling($inner-color, $border-color, $radius:5px, $specific-border:"", $hide:"false") {
+  border-style: solid;
+  border-width: 3px;
+  border-color: $border-color;
+  background-color: $inner-color;
+  @if  $specific-border != "" {
+    @if $hide == "true" {
+      @if $specific-border == "left" { border-left-style: none; border-radius: 0px $radius $radius 0px; }
+      @if $specific-border == "right" { border-right-style: none; border-radius: $radius 0px 0px $radius; }
+      @if $specific-border == "top" { border-top-style: none; border-radius: 0px 0px $radius $radius; }
+      @if $specific-border == "bottom" { border-bottom-style: none; border-radius: $radius $radius 0px 0px; }
+    }
+  } @else {
+    border-radius: $radius;
+  }
+}
